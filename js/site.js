@@ -46,7 +46,7 @@ function displayValues(numberArray) {
         tableHtml = tableHtml + '<tr><td>' + number + '</td></tr>';
     }
 
-    let tbody = document.getElementById('results')
+    let tbody = document.getElementById('results');
 
 }
 
