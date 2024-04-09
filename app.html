@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>APP NAME: A coding challenge</title>
+    <title>Hundo: A coding challenge</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
+        <!-- prism css -->
+        <link rel="stylesheet" href="/css/prism.css">
 
     <!-- custom css -->
     <link rel="shortcut icon" href="/img/light-logo - favicon.svg" type="image/x-icon">
@@ -32,7 +34,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-xxl">
-                <a class="navbar-brand" href="/index.html"> <img src="img/APPNAMELogo.svg" height="30">App Name</a>
+                <a class="navbar-brand" href="/index.html"> <img src="img/APPNAMELogo.svg" height="30">Hundo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,13 +59,60 @@
         </nav>
     </header>
 
-    <main class="container-xxl py-3 mt-5">
+    <main class="container py-3">
 
-        <h1>APP UI GOES HERE</h1>
-        <label>Secret Message</label>
-        <input id="message" type="text" value="hi" placeholder="Enter a Message">
-        <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+                <!-- info -->
+                <h1 class="fw-bold">Hundo: A Coding Challenge</h1>
+                <p class="lead"> Live life one loop at a time! Hundo is a JavaScript coding exercise using loops. The
+                    objective is to
+                    write a program which displays the numbers from 0 to 100 with even numbers in <b>BOLD</b>
+                </p>
+                <h2 class="mt-5 border-bottom">Instructions</h2>
+                <p>
+                    Enter a starting value and an ending value. Press the button and watch the values between those
+                    numbers appear on the page!
+                </p>
+            </div>
+            <div class="col">
+                <!-- app UI -->
+                <form action="#">
+                    <h3 class="border-bottom border-2">Enter values</h3>
+                    <div class="row g-3">
+                        <div class="col col-12 col-md-6">
+                            <label for="startNumber" class="form-label">
+                                Start Number
+                            </label>
+                            <input id="startNumber" class="form-control" placeholder="Start Number" type="number"
+                                required aria-label="Start Number" name="startNumber" value="0" max="100" min="0">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="endNumber" class="form-label">
+                                End Number
+                            </label>
+                            <input id="endNumber" class="form-control" placeholder="End Number" type="number" required
+                                aria-label="End Number" name="endNumber" value="100" max="100" min="0">
+                        </div>
+                        <div class="col-12 text-end">
+                            <button class="btn btn-primary" type="button" id="btnSubmit">
+                                Display the Hundo
+                            </button>
+                        </div>
+                    </div>
+                </form>
 
+                <h2 class="mt-5 border-bottom border-2">Results</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tbody id="results">
+                            <!-- results go here -->
+                       
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="container-fluid py-3">
@@ -98,7 +147,7 @@
         </script>
 
 
-        <!-- Sweet alert JS -->
+    <!-- Sweet alert JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -109,7 +158,7 @@
 
     <script>
         let button = document.getElementById('btnSubmit');
-        button.addEventListener('click', displayMessage);
+        button.addEventListener('click', getValues);
     </script>
 
 

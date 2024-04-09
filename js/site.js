@@ -1,17 +1,25 @@
-    // Display the message the user generated
-function displayMessage() {
+// collect user input, 
+// entry point of app 
+function getValues() {
 
-    // var is global to this scope 
-    // let is more tightly defined in scope, chat gpt this
+    //get the <input> element for startNumber and grab its value
+    // let startInputElement = document.getElementById('startNumber');
+    let startNumber = document.getElementById('startNumber').value;
+    //do the same thing for endNumber
 
-    let inputBox = document.getElementById('message');
-    let message = inputBox.value;
+    let endNumber = document.getElementById('endNumber').value;
 
-    Swal.fire({
-        title: "App Name", //change to actual app name
-        text: message,
-        icon: "success",
-        backdrop: false,
-      });
+    
+}
+//generate a list of numbers between those two values
+
+function generateValues() {
+
+}
+
+//display them in my results table.
+
+function displayValues() {
+
 }
 
