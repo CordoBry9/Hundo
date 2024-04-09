@@ -9,11 +9,17 @@ function getValues() {
 
     let endNumber = document.getElementById('endNumber').value;
 
-    
+
 }
 //generate a list of numbers between those two values
 
 function generateValues() {
+
+    let numbers = [];
+
+    for (let i = 0 ; i <= 100 ; i = i + 1){
+        numbers.push(i);
+    }
 
 }
 
