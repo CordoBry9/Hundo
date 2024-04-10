@@ -47,6 +47,7 @@ function displayValues(numberArray) {
     }
 
     let tbody = document.getElementById('results');
+    tbody.innerHTML = tableHtml;
 
 }
 
