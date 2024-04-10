@@ -120,7 +120,12 @@ footer .bi:hover {
     font-size: 3.5rem;
 }
 
-#message {
+.even {
+
+    font-weight: bolder;
+}
+
+.odd {
 
     
 }
